@@ -98,9 +98,8 @@ I am not a professional programmer, and I cannot guarantee that this mod will be
 * sleep.vmd
 * ride.vmd
 * die.vmd
-* custom\_\[1-4].vmd
-* itemActive\_\[itemName]*\[Left or Right]*\[using or swinging].vmd
-
+* custom_\[1-4\].vmd
+* itemActive_<namespace.item>\_<Left|Right>\_<using|swinging>.vmd
   * Example: `itemActive_minecraft.shield_Left_using.vmd`
   * Dedicated motion for specific items
 * onHorse.vmd
@@ -120,8 +119,3 @@ I am not a professional programmer, and I cannot guarantee that this mod will be
 ## Other Notes
 
 * To change the model size or adjust the item angle, edit the `model.properties` file.
-
----
-
-If you want, I can also rewrite this into a **fully polished GitHub README.md** format so it looks cleaner and more professional on the repository page.
-Do you want me to prepare that?
