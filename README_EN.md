@@ -2,7 +2,7 @@
 
 KAIMyEntity allows you to render 3D MikuMikuDance (MMD) models instead of the default Minecraft entities.
 
-I am not a professional programmer, and I cannot guarantee that this mod will be completely free of bugs or provide official support.
+This mod is still on development, and I cannot guarantee that this mod will be completely free of bugs or provide official support.
 
 ## How to Use
 
