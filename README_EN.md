@@ -1,67 +1,63 @@
 # KAIMyEntity-C
 
 KAIMyEntity allows you to render 3D models of MikuMikuDance instead of default entities.  
-  
-I'm not professional programer.  
-I can't support and guarantee that this mod work without any bugs.
 
 ## How to use
 
 ### What you need to prepare
 
-#### indispensable
+#### Indispensable
 
-* [this mod](https://github.com/Gengorou-C/KAIMyEntity-C/releases)
-* 3D model (PMX or PMD)
+* [This mod](https://github.com/Gengorou-C/KAIMyEntity-C/releases)
+* 3D model file (PMX or PMD)
 * [KAIMyEntitySaba.dll](https://github.com/Gengorou-C/KAIMyEntitySaba/releases/tag/20221215)
 * [MMDShader.fsh, MMDShader.vsh](https://github.com/Gengorou-C/KAIMyEntity-C/releases/tag/requiredFiles)
 
-#### almost indispensable
+#### Almost indispensable
 
-* [default VMD files](https://github.com/Gengorou-C/KAIMyEntity-C/releases/tag/requiredFiles)
+* [Default VMD files](https://github.com/Gengorou-C/KAIMyEntity-C/releases/tag/requiredFiles)
 * [lightMap.png](https://github.com/Gengorou-C/KAIMyEntity-C/releases/tag/requiredFiles)
 
-#### recommended
+#### Recommended
 
-* dedicated VMD files for each 3D models
+* Dedicated VMD files for each 3D model
 * [model.properties](https://github.com/Gengorou-C/KAIMyEntity-C/releases/tag/requiredFiles)
 
 ### Installation
 
-(1) Download appropriate jar file, and put it in mods folder.  
-(2) Run minecraft.  
-(3) If KAIMyEntity folder does't exist in Game directory, this mod will download a ZIP file and extract it.  
-(4) If KAIMyEntitySaba.dll does't exist in Game directory, it will be downloaded.  
-(5) Open KAIMyEntity folder, and copy and paste EntityPlayer folder.  
-(6) Rename the copied EntityPlayer folder "EntityPlayer_(YourName)".  
- (e.g.) "EntityPlayer_Gengorou-C"  
-(7) Put 3D model files in EntityPlayer_(YourName) folder.  
-(8) Rename the 3D model file "model.pmx" (or "model.pmd").  
-(9) Select world, and start the game.
+1. Download the appropriate .jar file and place it in the `mods` folder.  
+2. Run minecraft.  
+3. If the KAIMyEntity folder doesn't exist in the game's directory, this mod will create it by downloading a ZIP file and extracting it on the game's root folder.
+4. If the KAIMyEntitySaba.dll file doesn't exist in the game's directory, it will be downloaded on the game's root folder.  
+5. Open the KAIMyEntity folder and then copy and paste the EntityPlayer folder.  
+6. Rename the copied EntityPlayer folder to `EntityPlayer_[username]` (e.g.) "EntityPlayer_Gengorou-C"  
+7. Place the 3D model files inside the `EntityPlayer_[username]` folder.  
+8. Rename the 3D model file to `model.pmx` or `model.pmd`, depending on the model's original format.
+9. Start the game, select world and start playing.
 
-### Exmaple of directory tree
+### Example of the directory tree
 
 ```bash
 .
 ├── config
 ├── KAIMyEntity
 │   ├── DefaultAnim
-│   │   └── default VMD files
+│   │   └── Default VMD files
 │   ├── EntityPlayer
 │   │   ├── Texture files
-│   │   ├── dedicated VMD files
+│   │   ├── Dedicated VMD files
 │   │   ├── lightMap.png
 │   │   ├── model.properties
 │   │   └── model.pmx (or model.pmd)
 │   ├── EntityPlayer_(Player Name)
 │   │   ├── Texture files
-│   │   ├── dedicated VMD files
+│   │   ├── Dedicated VMD files
 │   │   ├── lightMap.png
 │   │   ├── model.properties
 │   │   └── model.pmx (or model.pmd)
 │   ├── (entity ID) (e.g. minecraft.horse)
 │   │   ├── Texture files
-│   │   ├── dedicated VMD files
+│   │   ├── Dedicated VMD files
 │   │   ├── lightMap.png
 │   │   └── model.pmx (or model.pmd)
 │   └── Shader
@@ -80,36 +76,50 @@ I can't support and guarantee that this mod work without any bugs.
 
 ### Player
 
-* idle.vmd
-* walk.vmd
-* sprint.vmd
-* sneak.vmd
-* swingRight.vmd
-* swingLeft.vmd
-* elytraFly.vmd
-* swim.vmd
-* onClimbable.vmd
-* onClimbableUp.vmd
-* onClimbableDown.vmd
-* sleep.vmd
-* ride.vmd
-* die.vmd
-* custom_[1-4].vmd
-* itemActive_[itemName]\_[Left or Right]_[using or swinging].vmd  
-(e.g. itemActive_minecraft.shield_Left_using.vmd)  
-(dedicated motion for each items)
-* onHorse.vmd
-* crawl.vmd
-* lieDown.vmd
+```
+EntityPlayer_[username]
+├── idle.vmd
+├── walk.vmd
+├── sprint.vmd
+├── sneak.vmd
+├── swim.vmd
+├── elytraFly.vmd
+├── onClimbable.vmd
+├── onClimbableUp.vmd
+├── onClimbableDown.vmd
+├── crawl.vmd
+├── lieDown.vmd
+├── sleep.vmd
+├── ride.vmd
+├── onHorse.vmd
+├── swingRight.vmd
+├── swingLeft.vmd
+├── die.vmd
+│
+├── custom_1.vmd
+├── custom_2.vmd
+├── custom_3.vmd
+├── custom_4.vmd
+│
+├── itemActive_[itemName]_[Left or Right]_[using or swinging].vmd
+│   (e.g. itemActive_minecraft.shield_Left_using.vmd)
+│
+├── model.pmx (or model.pmd)
+├── model.properties
+└── lightMap.png
+```
 
-### entity
+### Entity
 
-* idle.vmd
-* walk.vmd
-* swim.vmd
-* ridden.vmd
-* driven.vmd
+```
+EntityPlayer_[entityName]
+├── idle.vmd
+├── walk.vmd
+├── swim.vmd
+├── ridden.vmd
+├── driven.vmd
+```
 
-## others
+## Others
 
-* If you want to change model size, or item angle, you need to edit model.properties.  
+* If you want to change the model size or item angle, you can edit them in the `model.properties` file.  
