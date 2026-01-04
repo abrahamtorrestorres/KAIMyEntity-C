@@ -48,18 +48,18 @@ KAIMyEntity allows you to render 3D models of MikuMikuDance instead of default e
 │   │   ├── Dedicated VMD files
 │   │   ├── lightMap.png
 │   │   ├── model.properties
-│   │   └── model.pmx (or model.pmd)
-│   ├── EntityPlayer_(Player Name)
+│   │   └── model.pmx/model.pmd
+│   ├── EntityPlayer_[username]
 │   │   ├── Texture files
 │   │   ├── Dedicated VMD files
 │   │   ├── lightMap.png
 │   │   ├── model.properties
-│   │   └── model.pmx (or model.pmd)
-│   ├── (entity ID) (e.g. minecraft.horse)
+│   │   └── model.pmx/model.pmd
+│   ├── (Entity ID) (e.g. minecraft.horse)
 │   │   ├── Texture files
 │   │   ├── Dedicated VMD files
 │   │   ├── lightMap.png
-│   │   └── model.pmx (or model.pmd)
+│   │   └── model.pmx/model.pmd
 │   └── Shader
 │       ├── MMDShader.fsh
 │       └── MMDShader.vsh
@@ -76,7 +76,7 @@ KAIMyEntity allows you to render 3D models of MikuMikuDance instead of default e
 
 ### Player
 
-```
+```bash
 EntityPlayer_[username]
 ├── idle.vmd
 ├── walk.vmd
