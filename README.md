@@ -102,7 +102,9 @@ EntityPlayer_[username]
 ├── custom_4.vmd
 │
 ├── itemActive_[itemName]_[Left/Right]_[using/swinging].vmd
-│   (e.g. itemActive_minecraft.shield_Left_using.vmd)
+│   (e.g.)
+│       itemActive_minecraft.shield_Left_using.vmd
+│       itemActive_minecraft.iron_sword_Right_swinging.vmd
 │
 ├── model.pmx (or model.pmd)
 ├── model.properties
