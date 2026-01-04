@@ -101,7 +101,7 @@ EntityPlayer_[username]
 ├── custom_3.vmd
 ├── custom_4.vmd
 │
-├── itemActive_[itemName]_[Left or Right]_[using or swinging].vmd
+├── itemActive_[itemName]_[Left/Right]_[using/swinging].vmd
 │   (e.g. itemActive_minecraft.shield_Left_using.vmd)
 │
 ├── model.pmx (or model.pmd)
