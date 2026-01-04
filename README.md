@@ -55,7 +55,7 @@ KAIMyEntity allows you to render 3D models of MikuMikuDance instead of default e
 │   │   ├── lightMap.png
 │   │   ├── model.properties
 │   │   └── model.pmx/model.pmd
-│   ├── (Entity ID) (e.g. minecraft.horse)
+│   ├── [Entity ID] (e.g. minecraft.horse)
 │   │   ├── Texture files
 │   │   ├── Dedicated VMD files
 │   │   ├── lightMap.png
