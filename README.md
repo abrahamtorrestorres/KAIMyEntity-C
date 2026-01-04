@@ -1,77 +1,69 @@
 # KAIMyEntity-C
 
-[English](https://github.com/Gengorou-C/KAIMyEntity-C/blob/develop-C/README_EN.md)
+KAIMyEntity allows you to render 3D models of MikuMikuDance instead of default entities.  
+  
+I'm not professional programer.  
+I can't support and guarantee that this mod work without any bugs.
 
-## 0.
+## How to use
 
-高画質の画像を直接入れていたらGitのファイルサイズがデカくなってしまい、  
-上手く履歴からも削除しきれなかったのでリポジトリを新しく作成しました。  
-[古い方のリポジトリ](https://github.com/Gengorou-C/KAIMyEntity-C_old/)
+### What you need to prepare
 
-## 1.初めに
+#### indispensable
 
-私はプロのプログラマーではありません。  
-OpenGLなんかチンプンカンプンで、その上Javaのコードに触れたのもほぼ初めてです。  
-ですので、バクが無い保証はできませんし、バグが発生してもサポートできません。
-
-## 2.使い方
-
-### 使用するもの
-
-#### 必須
-
-* [このMODのJarファイル](https://github.com/Gengorou-C/KAIMyEntity-C/releases)
-* 使いたい3Dモデル(pmxもしくはpmd)
+* [this mod](https://github.com/Gengorou-C/KAIMyEntity-C/releases)
+* 3D model (PMX or PMD)
 * [KAIMyEntitySaba.dll](https://github.com/Gengorou-C/KAIMyEntitySaba/releases/tag/20221215)
 * [MMDShader.fsh, MMDShader.vsh](https://github.com/Gengorou-C/KAIMyEntity-C/releases/tag/requiredFiles)
 
-#### ほぼ必須
+#### almost indispensable
 
-* [デフォルトのVMDファイル](https://github.com/Gengorou-C/KAIMyEntity-C/releases/tag/requiredFiles)
+* [default VMD files](https://github.com/Gengorou-C/KAIMyEntity-C/releases/tag/requiredFiles)
 * [lightMap.png](https://github.com/Gengorou-C/KAIMyEntity-C/releases/tag/requiredFiles)
 
-#### 推奨
+#### recommended
 
-* モデルごとの専用VMDファイル
+* dedicated VMD files for each 3D models
 * [model.properties](https://github.com/Gengorou-C/KAIMyEntity-C/releases/tag/requiredFiles)
 
-### 導入手順
+### Installation
 
-(1)遊ぶマイクラのバージョンと前提Modを確認して、jarファイルをダウンロード、modsフォルダに配置。  
-(2)マイクラを起動。  
-(3)ゲームディレクトリにKAIMyEntityフォルダが無い場合、自動的にZipファイルをDL後に解凍します。  
-(4)ゲームディレクトリにKAIMyEntitySaba.dllが無い場合、自動的にDLします。  
-(5)KAIMyEntityフォルダ内のEntityPlayerフォルダをその場でコピー&ペースト。  
-(6)コピーしたEntityPlayerフォルダを「EntityPlayer_(プレイヤー名)」に改名。  
-(7)EntityPlayer_(プレイヤー名)フォルダにモデルのファイルたちを配置。  
-(8)モデルのファイル名をmodel.pmx(またはmodel.pmd)に変更。  
-(9)ワールドを選択してゲームを開始。
+(1) Download appropriate jar file, and put it in mods folder.  
+(2) Run minecraft.  
+(3) If KAIMyEntity folder does't exist in Game directory, this mod will download a ZIP file and extract it.  
+(4) If KAIMyEntitySaba.dll does't exist in Game directory, it will be downloaded.  
+(5) Open KAIMyEntity folder, and copy and paste EntityPlayer folder.  
+(6) Rename the copied EntityPlayer folder "EntityPlayer_(YourName)".  
+ (e.g.) "EntityPlayer_Gengorou-C"  
+(7) Put 3D model files in EntityPlayer_(YourName) folder.  
+(8) Rename the 3D model file "model.pmx" (or "model.pmd").  
+(9) Select world, and start the game.
 
-### ファイルの配置例
+### Exmaple of directory tree
 
 ```bash
 .
 ├── config
 ├── KAIMyEntity
 │   ├── DefaultAnim
-│   │   └── vmdファイル達
+│   │   └── default VMD files
 │   ├── EntityPlayer
-│   │   ├── テクスチャのファイルとかフォルダとか
-│   │   ├── モデル専用のvmdファイル
+│   │   ├── Texture files
+│   │   ├── dedicated VMD files
 │   │   ├── lightMap.png
 │   │   ├── model.properties
-│   │   └── model.pmx(または model.pmd)
+│   │   └── model.pmx (or model.pmd)
 │   ├── EntityPlayer_(Player Name)
-│   │   ├── テクスチャのファイルとかフォルダとか
-│   │   ├── モデル専用のvmdファイル
+│   │   ├── Texture files
+│   │   ├── dedicated VMD files
 │   │   ├── lightMap.png
 │   │   ├── model.properties
-│   │   └── model.pmx(または model.pmd)
-│   ├── (":"を"."に変換したエンティティのID)(例：minecraft.horse)
-│   │   ├── テクスチャのファイルとかフォルダとか
-│   │   ├── モデル専用のvmdファイル
+│   │   └── model.pmx (or model.pmd)
+│   ├── (entity ID) (e.g. minecraft.horse)
+│   │   ├── Texture files
+│   │   ├── dedicated VMD files
 │   │   ├── lightMap.png
-│   │   └── model.pmx(または model.pmd)
+│   │   └── model.pmx (or model.pmd)
 │   └── Shader
 │       ├── MMDShader.fsh
 │       └── MMDShader.vsh
@@ -81,58 +73,43 @@ OpenGLなんかチンプンカンプンで、その上Javaのコードに触れ�
 ├── saves
 ├── shaderpacks
 ├── KAIMyEntitySaba.dll
-└── (その他のファイル)
+└── ...
 ```
 
-## 3.機能
-
-* エンティティのモデルを変更できます。
-
-### 対応モーション
+## Motion list
 
 ### Player
 
-* 棒立ち(idle.vmd)
-* 歩行(walk.vmd)
-* スプリント(sprint.vmd)
-* スニーク(sneak.vmd)
-* 右腕でアイテム使用(swingRight.vmd)
-* 左腕でアイテム使用(swingLeft.vmd)
-* エリトラでの飛行(elytraFly.vmd)
-* 水泳(swim.vmd)
-* はしごなどで停止(onClimbable.vmd)
-* はしごなどの上り(onClimbableUp.vmd)
-* はしごなどの下り(onClimbableDown.vmd)
-* 睡眠(sleep.vmd)
-* 騎乗(ride.vmd)
-* 死亡(die.vmd)
-* 任意のタイミングで再生機能なモーション4つ(custom_[1-4].vmd)
-* 特定のアイテムを特定の腕で使ったときのモーション  
-(itemActive_[itemName]\_[Left or Right]_[using or swinging].vmd)
-* 乗馬中の移動(onHorse.vmd)
-* 匍匐前進(crawl.vmd)
-* 伏せ(lieDown.vmd)
+* idle.vmd
+* walk.vmd
+* sprint.vmd
+* sneak.vmd
+* swingRight.vmd
+* swingLeft.vmd
+* elytraFly.vmd
+* swim.vmd
+* onClimbable.vmd
+* onClimbableUp.vmd
+* onClimbableDown.vmd
+* sleep.vmd
+* ride.vmd
+* die.vmd
+* custom_[1-4].vmd
+* itemActive_[itemName]\_[Left or Right]_[using or swinging].vmd  
+(e.g. itemActive_minecraft.shield_Left_using.vmd)  
+(dedicated motion for each items)
+* onHorse.vmd
+* crawl.vmd
+* lieDown.vmd
 
-### other
+### entity
 
-* 棒立ち(idle.vmd)
-* 歩行(walk.vmd)
-* 水泳(swim.vmd)
-* 乗せる(ridden.vmd)
-* 何かを乗せて移動(driven.vmd)
+* idle.vmd
+* walk.vmd
+* swim.vmd
+* ridden.vmd
+* driven.vmd
 
-## その他
+## others
 
-* model.propertiesでモデルのサイズと持っているアイテムの角度を変更できます。  
-書き方はReleaseに置いてあるファイルやソースコードを参考にしてください。  
-* lightMap.pngを編集するとモデルに当たる環境光やアイテム由来の光の色が変更できます。  
-(シェーダー使用中はシェーダーの方が優先されます。)
-* [requiredFiles](https://github.com/Gengorou-C/KAIMyEntity-C/releases/tag/requiredFiles)にあるKAIMyEntity.zipに入っているファイルに関してはご自由にお使いください。  
-(クレジット表記不要、改変可、再配布可)
-
-### やりたいこと(達成時期どころか、可能かどうかすら不明のものを含む)
-
-* エリトラを描画
-* 手に持ったアイテムの描画位置調整
-* 物理演算の有効/無効の切り替え
-* 使用中のモデル切り替え
+* If you want to change model size, or item angle, you need to edit model.properties.  
